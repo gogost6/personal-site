@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.nav-link.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5.5625rem;
+    line-height: 26px;
+    letter-spacing: -0.800000011920929px;
+    text-align: left;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--black-light);
+    margin-bottom: 1.5rem;
+    filter: opacity(0.5);
+    transition: all;
+    transition-duration: 350ms;
+}
+
+.nav-link:hover {
+    color: var(--orange) !important;
+    filter: opacity(1);
+}
+
+.nav-link.active {
+    filter: opacity(1);
+}

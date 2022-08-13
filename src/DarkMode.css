@@ -1,0 +1,55 @@
+[data-theme='dark'] {
+    --font-color: #fffcf5;
+    --background-color: #0c0b05;
+    --orange: #d3902a;
+    --gray: #fffcf5;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6,
+[data-theme='dark'] a,
+[data-theme='dark'] ul,
+[data-theme='dark'] li {
+    color: var(--font-color) !important;
+}
+
+[data-theme='dark'] p,
+[data-theme='dark'] h2 {
+    color: var(--gray) !important;
+}
+
+[data-theme='dark'] strong,
+[data-theme='dark'] b,
+[data-theme='dark'] h3 {
+    color: var(--orange) !important;
+}
+
+.screen-mode-svg {
+    margin-right: 0.625rem;
+    background: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+.screen-mode-anchor {
+    transition: all;
+    transition-duration: 350ms;
+    padding: 10px 5px;
+    position: fixed;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.screen-mode-anchor:hover {
+    filter: opacity(0.6);
+}

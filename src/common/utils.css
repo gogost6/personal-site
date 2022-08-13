@@ -1,0 +1,15 @@
+input {
+    background-color: #f1ece6;
+    outline: none !important;
+}
+
+input::placeholder,
+input:-ms-input-placeholder,
+input::-webkit-input-placeholder,
+input:placeholder-shown {
+    color: #9d9690;
+}
+
+.input:focus {
+    border: 1px solid #d3902a;
+}
