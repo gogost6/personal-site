@@ -5,7 +5,7 @@
     --gray: #fffcf5;
 }
 
-body {
+[data-theme='dark'] body {
     background-color: var(--background-color);
 }
 
