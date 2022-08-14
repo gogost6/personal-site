@@ -8,7 +8,7 @@ h1 {
     margin-bottom: 1.5rem !important;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     h1 {
         font-size: 36px;
         line-height: 44px;

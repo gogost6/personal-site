@@ -200,19 +200,19 @@ textarea {
     overflow-y: hidden;
 }
 
-@media screen and (max-width: 1440px) {
+@media (max-width: 1440px) {
     .content {
         padding-left: 15rem;
     }
 }
 
-@media screen and (max-width: 744px) {
+@media (max-width: 744px) {
     .content {
         padding-left: 11rem;
     }
 }
 
-@media screen and (max-width: 390px) {
+@media (max-width: 390px) {
     .content {
         padding-left: 1rem;
         padding-right: 1rem;
