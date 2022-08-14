@@ -1,7 +1,13 @@
+.slick-slider {
+    height: 350px;
+}
+
 .slide-image {
     height: 320px;
     width: 400px;
     object-fit: cover;
+    transition: all;
+    transition-duration: 550ms;
 }
 
 .slick-slide {
@@ -52,16 +58,11 @@
     color: #ffffff;
     opacity: 0;
 }
-.slide-image {
-    transition: all;
-    transition-duration: 550ms;
-}
-a.img-wrap:hover .slide-image {
-    filter: brightness(0.7);
-}
-
 .img-wrap:hover p {
     z-index: 1;
     opacity: 1;
     filter: brightness(1);
+}
+a.img-wrap:hover .slide-image {
+    filter: brightness(0.7);
 }
