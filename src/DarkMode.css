@@ -53,3 +53,12 @@
 .screen-mode-anchor:hover {
     filter: opacity(0.6);
 }
+
+@media screen and (max-width: 391px) {
+    .screen-mode-anchor {
+        display: flex !important;
+        position: initial;
+        bottom: 0;
+        padding: 0 1.5rem;
+    }
+}

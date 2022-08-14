@@ -40,3 +40,63 @@ nav {
 .nav-link.active {
     filter: opacity(1);
 }
+
+@media screen and (max-width: 390px) {
+    header {
+        background: rgb(255, 232, 215);
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav {
+        width: 100%;
+        position: absolute;
+        top: -500px;
+        background-color: inherit;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition: top;
+        transition-duration: 600ms;
+    }
+
+    nav.shown {
+        top: 74px;
+    }
+
+    nav a {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .hamburger {
+        width: 24px;
+        height: 24px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        z-index: 1;
+    }
+
+    .nav-link.logo {
+        display: none;
+    }
+
+    .nav-link.logo.mobile {
+        display: block;
+        margin-bottom: 0;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 391px) {
+    .nav-link.logo.mobile {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
