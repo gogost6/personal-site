@@ -8,18 +8,24 @@ import { MouseEvent, useRef, useState } from 'react';
 
 export default function Header() {
     const [navRef, setNavRef] = useState('');
+    const [hamburgerSrc, setHamburgerSrc] = useState({
+        image: hamburger,
+        name: 'hamburger',
+    });
 
     const OnClick = (e: MouseEvent<HTMLElement>) => {
-        if (e.target instanceof HTMLImageElement) {
-            const el = e.target;
-            if (el.classList.contains('hamburger')) {
-                if (el.src.includes('hamburger')) {
-                    el.src = xIcon;
-                } else {
-                    el.src = hamburger;
-                }
-            }
+        if (hamburgerSrc.name == 'hamburger') {
+            setHamburgerSrc({
+                image: xIcon,
+                name: 'x-icon',
+            });
+        } else {
+            setHamburgerSrc({
+                image: hamburger,
+                name: 'hamburger',
+            });
         }
+
         if (navRef == '') {
             setNavRef('shown');
         } else {
@@ -37,7 +43,11 @@ export default function Header() {
             >
                 GS.
             </NavLink>
-            <img className="hamburger" src={hamburger} alt="hamburger" />
+            <img
+                className="hamburger"
+                src={hamburgerSrc.image}
+                alt="hamburger"
+            />
             <nav className={navRef}>
                 <NavLink
                     className={(isActive) =>
