@@ -26,7 +26,7 @@ export default function Home() {
                 Based in <b>Sofia, Bulgaria.</b> I am currently working with{' '}
                 <b> React, JS, some Wordpress, PHP and Tailwind.</b>
             </h2>
-            <h2 style={{ maxWidth: '31.75rem', marginBottom: '1.3125rem' }}>
+            <h2 style={{ maxWidth: '31.75rem', marginBottom: '4rem' }}>
                 Working from the middle of 2022 year at <b>Grind Web Studio</b>{' '}
                 as FE developer. Happy to be in an experinced and frindly team.
             </h2>
