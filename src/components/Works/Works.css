@@ -73,3 +73,21 @@
     width: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 480px) {
+    .works-container {
+        padding-right: 0;
+    }
+    .works-container .images-container {
+        grid-template-columns: 1fr;
+    }
+    .works-container li a {
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .works-container .images-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
