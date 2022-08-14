@@ -41,7 +41,7 @@ nav {
     filter: opacity(1);
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
     header {
         background: rgb(255, 232, 215);
         width: 100%;
@@ -91,7 +91,7 @@ nav {
     }
 }
 
-@media (min-width: 391px) {
+@media (min-width: 481px) {
     .nav-link.logo.mobile {
         display: none;
     }

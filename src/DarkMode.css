@@ -54,7 +54,7 @@
     filter: opacity(0.6);
 }
 
-@media (max-width: 391px) {
+@media (max-width: 480px) {
     .screen-mode-anchor {
         display: flex !important;
         position: initial;

@@ -206,13 +206,13 @@ textarea {
     }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 1024px) {
     .content {
         padding-left: 11rem;
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
     .content {
         padding-left: 1rem;
         padding-right: 1rem;
