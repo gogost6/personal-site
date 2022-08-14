@@ -25,7 +25,7 @@ nav {
 
 .nav-link {
     text-decoration: none;
-    color: var(--black-light);
+    color: var(--dark-black);
     margin-bottom: 1.5rem;
     filter: opacity(0.5);
     transition: all;
