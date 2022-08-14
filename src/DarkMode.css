@@ -55,6 +55,14 @@
 }
 
 @media (max-width: 480px) {
+    [data-theme='dark'] header {
+        background-color: var(--orange);
+    }
+
+    [data-theme='dark'] .hamburger {
+        filter: invert(1);
+    }
+
     .screen-mode-anchor {
         display: flex !important;
         position: initial;
