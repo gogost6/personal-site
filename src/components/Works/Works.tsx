@@ -1,6 +1,13 @@
 import './Works.scss';
 import saltImg from '../../assets/projects/salt.png';
-import { MouseEvent, useState } from 'react';
+import { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import '../../common/slider.scss';
+
+function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+}
 
 export default function Works() {
     let imagesArray = [];
@@ -12,6 +19,20 @@ export default function Works() {
     ];
     const [activeId, setActiveId] = useState<number>(1);
 
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
     for (let i = 0; i < 10; i++) {
         imagesArray.push(saltImg);
     }
@@ -21,14 +42,33 @@ export default function Works() {
             <h1>Works page</h1>
             <h2>Repository of projects that I worked before.</h2>
             <ul>
-                {categories.map((x) => (
-                    <li
-                        onClick={() => setActiveId(x.id)}
-                        className={activeId === x.id ? 'active' : ''}
-                    >
-                        <a>{x.text}</a>
-                    </li>
-                ))}
+                {windowSize.innerWidth > 1024 ? (
+                    <>
+                        {categories.map((x) => (
+                            <li
+                                onClick={() => setActiveId(x.id)}
+                                className={activeId === x.id ? 'active' : ''}
+                            >
+                                <a>{x.text}</a>
+                            </li>
+                        ))}
+                    </>
+                ) : (
+                    <Slider {...{ variableWidth: true, infinite: false }}>
+                        {categories.map((x) => (
+                            <li
+                                onClick={() => setActiveId(x.id)}
+                                className={
+                                    activeId === x.id
+                                        ? 'category-slide active'
+                                        : 'category-slide'
+                                }
+                            >
+                                <a>{x.text}</a>
+                            </li>
+                        ))}
+                    </Slider>
+                )}
             </ul>
             <div className="images-container">
                 {imagesArray.map((x) => {
