@@ -1,0 +1,33 @@
+.home {
+    .img-wrap {
+        position: relative;
+
+        p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31px;
+            letter-spacing: -0.25px;
+            text-align: left;
+            color: #ffffff;
+            opacity: 0;
+        }
+    }
+
+    .img-wrap:hover p {
+        z-index: 1;
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    .img-wrap:hover .slide-image {
+        filter: brightness(0.7);
+    }
+}
