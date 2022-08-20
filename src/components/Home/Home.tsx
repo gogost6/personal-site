@@ -1,9 +1,9 @@
-import 'swiper/css/bundle';
 import img from '../../assets/projects/img.png';
 import rabit from '../../assets/projects/rabit.jpeg';
 import sample from '../../assets/projects/sample.png';
 import linkSvg from '../../assets/link-2.svg';
 import Slider from 'react-slick';
+import '../../common/slider.scss';
 
 export default function Home() {
     const images = [
@@ -17,7 +17,7 @@ export default function Home() {
     ];
 
     return (
-        <>
+        <section className="home">
             <h1 style={{ maxWidth: '34.8125rem' }}>
                 Welcome to my not so original portfolio!
             </h1>
@@ -59,6 +59,6 @@ export default function Home() {
                     );
                 })}
             </Slider>
-        </>
+        </section>
     );
 }
