@@ -1,0 +1,103 @@
+.works-container {
+    padding-right: 1.5rem;
+
+    h2 {
+        margin-bottom: 3.375rem;
+    }
+
+    ul {
+        display: flex;
+        border-bottom: 1px solid #00000026;
+        min-height: 2.1875rem;
+        margin-bottom: 2.5rem;
+
+        li {
+            color: inherit !important;
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            padding-right: 2.5rem;
+            transition: all;
+            transition-duration: 350ms;
+
+            ::after {
+                transition: all;
+                transition-duration: 350ms;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                border-bottom: 1px solid;
+            }
+
+            a {
+                width: 100%;
+                color: inherit;
+            }
+        }
+        li.active {
+            color: var(--dark-black) !important;
+
+            ::after {
+                opacity: 1;
+                border-color: inherit;
+            }
+        }
+
+        li:hover {
+            color: var(--dark-black) !important;
+            :after {
+                opacity: 1;
+                border-color: inherit;
+            }
+        }
+    }
+
+    .images-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        img {
+            max-height: 246px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .works-container {
+        padding-right: 0;
+        li {
+            padding-right: 2rem;
+        }
+
+        .images-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .works-container .images-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+[data-theme='dark'] .works-container {
+    ul {
+        border-color: #ffffff26;
+        color: #fffcf599;
+        border-bottom: 1px solid #ffffff26;
+    }
+
+    li:hover {
+        color: white !important;
+    }
+
+    li.active {
+        color: var(--bg-white) !important;
+    }
+}
