@@ -27,11 +27,37 @@
         width: 32px;
         height: 32px;
     }
+    .slick-prev {
+        z-index: 1;
+        background-color: black;
+        -webkit-mask: url(../assets/arrow-left.svg) no-repeat center;
+        mask: url(../assets/arrow-left.svg) no-repeat center;
+        ::before {
+            content: '' !important;
+        }
+    }
     .slick-prev::before {
-        content: url('../assets/arrow-left.svg');
+        content: '' !important;
+    }
+    .slick-next {
+        z-index: 1;
+        background-color: black;
+        -webkit-mask: url(../assets/arrow-right.svg) no-repeat center;
+        mask: url(../assets/arrow-right.svg) no-repeat center;
+
+        ::before {
+            content: '' !important;
+        }
     }
     .slick-next::before {
-        content: url('../assets/arrow-right.svg');
+        content: '' !important;
+    }
+}
+
+[data-theme='dark'] .home {
+    .slick-next,
+    .slick-prev {
+        background: #fffcf5;
     }
 }
 

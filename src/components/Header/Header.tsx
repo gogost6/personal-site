@@ -32,6 +32,26 @@ export default function Header() {
 
             navRef == '' ? setNavRef('shown') : setNavRef('');
         }
+
+        if (
+            e.target instanceof HTMLElement &&
+            e.target.classList.contains('logo')
+        ) {
+            if (navRef == 'shown') {
+                if (hamburgerSrc.name == 'hamburger') {
+                    setHamburgerSrc({
+                        image: xIcon,
+                        name: 'x-icon',
+                    });
+                } else {
+                    setHamburgerSrc({
+                        image: hamburger,
+                        name: 'hamburger',
+                    });
+                }
+                setNavRef('');
+            }
+        }
     };
 
     return (
