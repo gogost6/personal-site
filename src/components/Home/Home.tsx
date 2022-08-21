@@ -4,6 +4,7 @@ import sample from '../../assets/projects/sample.png';
 import linkSvg from '../../assets/link-2.svg';
 import Slider from 'react-slick';
 import '../../common/slider.scss';
+import './Home.scss';
 
 export default function Home() {
     const images = [
@@ -18,15 +19,13 @@ export default function Home() {
 
     return (
         <section className="home">
-            <h1 style={{ maxWidth: '34.8125rem' }}>
-                Welcome to my not so original portfolio!
-            </h1>
-            <h3 style={{ marginBottom: '2.5rem' }}>Some jokes here...!</h3>
-            <h2 style={{ maxWidth: '31.75rem', paddingBottom: '1.5rem' }}>
+            <h1>Welcome to my not so original portfolio!</h1>
+            <h3>Some jokes here...!</h3>
+            <h2 style={{ paddingBottom: '1.5rem' }}>
                 Based in <b>Sofia, Bulgaria.</b> I am currently working with{' '}
                 <b> React, JS, some Wordpress, PHP and Tailwind.</b>
             </h2>
-            <h2 style={{ maxWidth: '31.75rem', marginBottom: '4rem' }}>
+            <h2 style={{ marginBottom: '4rem' }}>
                 Working from the middle of 2022 year at <b>Grind Web Studio</b>{' '}
                 as FE developer. Happy to be in an experinced and frindly team.
             </h2>
