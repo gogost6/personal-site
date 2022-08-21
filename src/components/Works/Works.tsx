@@ -54,15 +54,21 @@ export default function Works() {
                         ))}
                     </>
                 ) : (
-                    <Slider {...{ variableWidth: true, infinite: false }}>
+                    <Slider
+                        {...{
+                            variableWidth: true,
+                            infinite: false,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            focusOnSelect: true,
+                            mobileFirst: true,
+                            swipeToSlide: true,
+                        }}
+                    >
                         {categories.map((x) => (
                             <li
                                 onClick={() => setActiveId(x.id)}
-                                className={
-                                    activeId === x.id
-                                        ? 'category-slide active'
-                                        : 'category-slide'
-                                }
+                                className={activeId === x.id ? 'active' : ''}
                             >
                                 <a>{x.text}</a>
                             </li>

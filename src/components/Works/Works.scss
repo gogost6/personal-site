@@ -35,8 +35,10 @@
             a {
                 width: 100%;
                 color: inherit;
+                white-space: nowrap;
             }
         }
+
         li.active {
             color: var(--dark-black) !important;
 
@@ -67,6 +69,18 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .works-container {
+        .images-container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        ul {
+            display: block;
+        }
+    }
+}
+
 @media (max-width: 480px) {
     .works-container {
         padding-right: 0;
@@ -77,12 +91,6 @@
         .images-container {
             grid-template-columns: 1fr;
         }
-    }
-}
-
-@media (max-width: 1024px) {
-    .works-container .images-container {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
