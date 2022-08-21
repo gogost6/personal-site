@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './hooks/ScrollToTop.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,9 @@ root.render(
             <title>GS Portfolio</title>
         </Helmet>
         <BrowserRouter>
-            <App />
+            <ScrollToTop>
+                <App />
+            </ScrollToTop>
         </BrowserRouter>
     </>
 );
