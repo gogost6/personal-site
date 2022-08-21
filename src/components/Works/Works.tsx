@@ -46,6 +46,7 @@ export default function Works() {
                     <>
                         {categories.map((x) => (
                             <li
+                                key={x.id}
                                 onClick={() => setActiveId(x.id)}
                                 className={activeId === x.id ? 'active' : ''}
                             >
@@ -67,6 +68,7 @@ export default function Works() {
                     >
                         {categories.map((x) => (
                             <li
+                                key={x.id}
                                 onClick={() => setActiveId(x.id)}
                                 className={activeId === x.id ? 'active' : ''}
                             >

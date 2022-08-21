@@ -14,22 +14,27 @@ export default function Header() {
     });
 
     const OnClick = (e: MouseEvent<HTMLElement>) => {
-        if (hamburgerSrc.name == 'hamburger') {
-            setHamburgerSrc({
-                image: xIcon,
-                name: 'x-icon',
-            });
-        } else {
-            setHamburgerSrc({
-                image: hamburger,
-                name: 'hamburger',
-            });
-        }
+        if (
+            e.target instanceof HTMLElement &&
+            !e.target.classList.contains('logo')
+        ) {
+            if (hamburgerSrc.name == 'hamburger') {
+                setHamburgerSrc({
+                    image: xIcon,
+                    name: 'x-icon',
+                });
+            } else {
+                setHamburgerSrc({
+                    image: hamburger,
+                    name: 'hamburger',
+                });
+            }
 
-        if (navRef == '') {
-            setNavRef('shown');
-        } else {
-            setNavRef('');
+            if (navRef == '') {
+                setNavRef('shown');
+            } else {
+                setNavRef('');
+            }
         }
     };
 
