@@ -30,11 +30,7 @@ export default function Header() {
                 });
             }
 
-            if (navRef == '') {
-                setNavRef('shown');
-            } else {
-                setNavRef('');
-            }
+            navRef == '' ? setNavRef('shown') : setNavRef('');
         }
     };
 
